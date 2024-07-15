@@ -61,7 +61,11 @@ table, td, th {
   border: 1px solid black;
 }
 
-
+@media (max-width: 1030px) {
+  .out-degree {
+    display: none;
+  }
+}
 @media (max-width: 970px) {
   .term-1 {
     display: none;
