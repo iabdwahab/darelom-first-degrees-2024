@@ -8,12 +8,18 @@ fetch('https://iabdwahab.me/darelom-first-degrees-2024/data.json').then(res => r
     
     if (typeof student.degrees !== 'string') {
       for (let i = 0; i < student.degrees.length; i++) {
+        let degree = student.degrees[i];
+
         if (i === 1) {
           continue;
         }
+
+        if (degree.startsWith('/')) {
+          degree = degree.substring(1);
+        }
         
-        if (!isNaN(Number(student.degrees[i]))) {
-          student.total += Number(student.degrees[i]);
+        if (!isNaN(Number(degree))) {
+          student.total += Number(degree);
         }
       }
     } 
