@@ -11,6 +11,7 @@ body {
   padding-bottom: 30px;
 }
 
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -33,11 +34,16 @@ body {
   padding: 4px 0;
 }
 
-.description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.notes {
+  text-align: right;
+}
+
+.notes__title {
+  color: red;
+}
+
+ul {
+  list-style-position: inside;
 }
 
 .saad-img {
