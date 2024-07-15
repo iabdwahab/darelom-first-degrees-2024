@@ -7,7 +7,11 @@ fetch('https://iabdwahab.me/darelom-first-degrees-2024/data.json').then(res => r
     student.total = 0;
     
     if (typeof student.degrees !== 'string') {
-      for (let i = 2; i < student.degrees.length; i++) {
+      for (let i = 0; i < student.degrees.length; i++) {
+        if (i === 1) {
+          continue;
+        }
+        
         if (!isNaN(Number(student.degrees[i]))) {
           student.total += Number(student.degrees[i]);
         }
@@ -45,7 +49,7 @@ fetch('https://iabdwahab.me/darelom-first-degrees-2024/data.json').then(res => r
           <td class="term-2">${data[i].degrees[13] || 0}</td>
 
           <td class="total-el">${data[i].total}</td>
-          <td class="percentage-el">${(data[i].total * 100 / 1200).toFixed(2)}%</td>
+          <td class="percentage-el">${(data[i].total * 100 / 1300).toFixed(2)}%</td>
         </tr>
       `;
     }
