@@ -56,6 +56,12 @@ table, td, th {
 }
 
 
+@media (max-width: 970px) {
+  .term-1 {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
 
   td, th {
