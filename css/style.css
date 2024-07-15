@@ -70,6 +70,10 @@ table, td, th {
   .term-1 {
     display: none;
   }
+
+  .author {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 768px) {
